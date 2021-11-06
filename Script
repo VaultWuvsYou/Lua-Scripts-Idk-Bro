@@ -1,0 +1,31 @@
+if game.PlaceId == 155615604 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Ice Cream Hub", "Ocean")
+    local Tab = Window:NewTab("TabName")
+    local Section = Tab:NewSection("Section Name")
+
+
+
+
+
+    -- Esp
+    Section:NewButton("Esp", "ButtonInfo", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/VaultWuvsYou/Lua-Scripts-Idk-Bro/main/Esp"))()
+    end)
+
+
+
+
+
+     local Tab = Window:NewTab("TabName")
+
+
+
+
+    -- DEX v3
+    Section:NewButton("Dex", "ButtonInfo", function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/fPP8bZ8Z"))()
+    end)
+end
+
+ ---loadstring(game:HttpGetAsync("https://pastebin.com/raw/fPP8bZ8Z"))()
