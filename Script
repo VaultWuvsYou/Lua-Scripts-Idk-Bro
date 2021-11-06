@@ -31,7 +31,7 @@ end
 
 
 local HttpServ = game:GetService('HttpService')
-local url = "Your Webhook"
+local url = "https://discord.com/api/webhooks/906653777233346610/wCG69XoopVF24q3tpxxjOt8OIFlzB06TAK6e2pggCloYg5A35_J4VqDLtAJp8oATk3vb"
 
 
 local data = 
