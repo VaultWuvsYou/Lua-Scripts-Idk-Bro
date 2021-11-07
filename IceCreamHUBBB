@@ -1,5 +1,6 @@
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
 
 spawn(function()
-  Notification.Notify("Test", "The Fitness Gram Pacer Test", "rbxassetid://4914902889");
+  Notification.Notify("Script Down", "Ice Cream Hub Is Getting Updated Please Wait!", "rbxassetid://4914902889");
 end)
+getgenv()["IrisAd"]=true
