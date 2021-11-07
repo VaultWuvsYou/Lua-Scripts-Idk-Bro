@@ -1,0 +1,145 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/VaultWuvsYou/Lua-Scripts-Idk-Bro/main/Script"))()    
+    
+    
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------------- Prison Life ---------------------------------------------------------------------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+    if game.PlaceId == 155615604 then
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+        local Window = Library.CreateLib("Ice Cream Hub", "Ocean")
+        local Tab = Window:NewTab("Main")
+        local Section = Tab:NewSection("Main")
+
+
+
+    -- Esp
+    Section:NewButton("Esp", "ButtonInfo", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/VaultWuvsYou/Lua-Scripts-Idk-Bro/main/Esp"))()
+    end)
+
+
+
+
+
+
+
+    -- give guns
+
+
+    Section:NewDropdown("Give Gun", "Gives the localplayer a gun", {"M9", "Remington 870", "AK-47"}, function(v)
+        local A_1 = game:GetService("Workspace")["Prison_ITEMS"].giver[v].ITEMPICKUP
+        local Event = game:GetService("Workspace").Remote.ItemHandler
+        Event:InvokeServer(A_1)
+    end)
+
+
+    -- gun mods
+
+
+    Section:NewButton("Gun mods", "ButtonInfo", function()
+        workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS:findFirstChild('M9', true).ITEMPICKUP)
+wait(0.1)
+workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS:findFirstChild('Remington 870', true).ITEMPICKUP)
+wait(0.1)
+workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS:findFirstChild('AK-47', true).ITEMPICKUP)
+for i, v in next, debug.getregistry() do 
+    if type(v) == "table" then 
+        if v.Bullets then 
+            v.AutoFire = true
+            v.FireRate = 0
+            v.Bullets = 20
+			v.Range = math.huge
+            v.MaxAmmo = math.huge
+			v.CurrentAmmo = math.huge
+			v.StoredAmmo = math.huge
+        end
+    end
+end
+
+    end)
+
+
+    local Tab3 = Window:NewTab("Teams")
+    local Section3 = Tab3:NewSection("Teams")
+    
+    Section3:NewButton("Crim", "ButtonInfo", function()
+        weld02 = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-919.958, 95.327, 2138.189)
+    wait(0.075)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(weld02)
+    end)
+
+    Section3:NewButton("Guard", "ButtonInfo", function()
+        Workspace.Remote.TeamEvent:FireServer("Bright blue")
+    end)
+
+    Section3:NewButton("Inmate", "ButtonInfo", function()
+        Workspace.Remote.TeamEvent:FireServer("Bright orange") 
+    end)
+
+    Section3:NewButton("Neutral", "ButtonInfo", function()
+        Workspace.Remote.TeamEvent:FireServer("Medium stone grey")
+    end)
+
+
+    -- tp
+
+    local Tab4 = Window:NewTab("Teleports")
+
+    local Section4 = Tab4:NewSection("Coming Soon")
+
+    Section4:NewButton("Prison", "ButtonInfo", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(918.77,100,2379.07)
+    end)
+
+    Section4:NewButton("Yard", "ButtonInfo", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(779.87,98,2458.93)
+    end)
+
+    Section4:NewButton("Crimbase", "ButtonInfo", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-943.46,94.13,2063.63)
+    end)
+
+
+
+
+    local Tab5 = Window:NewTab("Settings")
+
+    local Section5 = Tab5:NewSection("UI Settings")
+
+
+
+
+    Section5:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.P, function()
+        Library:ToggleUI()
+    end)
+
+
+
+    
+
+    local Tab2 = Window:NewTab("Dev")
+
+    local Section2 = Tab2:NewSection("Dev Stuff")
+
+
+          -- Prison Admin
+          Section2:NewButton("Prison Admin", "ButtonInfo", function()
+            loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
+        end)
+
+
+      -- DEX v3
+     Section2:NewButton("Dex", "ButtonInfo", function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/fPP8bZ8Z"))()
+    end)
+
+
+
+
+end
